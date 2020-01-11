@@ -15,8 +15,6 @@ def page_not_found(e):
 
 def take_home_memes():
     memes = os.listdir("./static/")
-    for i in memes:
-        i = str('/static/' + i + ' ')
     return memes
 
 
