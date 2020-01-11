@@ -31,11 +31,11 @@ def shut_up_and_shuffle(array):
     return shuffled_array
 
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def show_picture():
     memes = take_home_memes()
     mem = random.choice(memes)
-    mem = '/static/' + mem
+    mem = './static/' + mem
     return render_template('home.html', mem=mem)
 
 
