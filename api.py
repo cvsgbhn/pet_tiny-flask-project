@@ -9,7 +9,7 @@ app.config["DEBUG"] = True
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found():
     return "<h1>404</h1><p>The resource could not be found.</p>", 404
 
 
@@ -33,7 +33,7 @@ def shut_up_and_shuffle(array):
 def show_picture():
     memes = take_home_memes()
     mem = random.choice(memes)
-    mem = './static/' + mem
+    mem = './static/images' + mem
     return render_template('home.html', mem=mem)
 
 
