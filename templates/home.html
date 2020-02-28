@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/mem-page.css') }}">
+  </head>
   <body>
     <link rel="stylesheet" href="mem_page.css">
-    <h1>universe_name</h1>
+    <h1 align="center">universe_name</h1>
     <p></p>
     <img src="{{ mem }}"/>
   </body>
