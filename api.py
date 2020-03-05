@@ -7,14 +7,17 @@ import random
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
+@app.route('/', methods=['GET','POST'])
+def universe_button_tap():
+    return # name of universe folder
 
 @app.errorhandler(404)
-def page_not_found():
+def page_not_found(arg):
     return "<h1>404</h1><p>The resource could not be found.</p>", 404
 
 
 def take_home_memes():
-    memes = os.listdir("./static/")
+    memes = os.listdir("./static/images/witcher")
     return memes
 
 
@@ -33,8 +36,9 @@ def shut_up_and_shuffle(array):
 def show_picture():
     memes = take_home_memes()
     mem = random.choice(memes)
-    mem = './static/images' + mem
-    return render_template('home.html', mem=mem)
+    mem = './static/images/witcher/' + mem
+    universe_name = mem.split("/")[3]
+    return render_template('home.html', mem=mem, universe_name=universe_name)
 
 
 app.run()
