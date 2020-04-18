@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% if title %}
+    <title>Meet {{ title }}</title>
+    {% else %}
+    <title>Memes as you like it</title>
+    {% endif %}
 </head>
-<body>
-
+<hr>
+    <div><a>Meet {{ title }}!</a></div>
+    <hr>
+    {% block content %}{% endblock %}
 </body>
 </html>

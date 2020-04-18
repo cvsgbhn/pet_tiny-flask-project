@@ -1,6 +1,31 @@
-body {
   h1 {
-    background-color: #000033;
+    background-color: #b55e91;
     font-family:  Helvetica, Arial, Geneva, sans-serif; 
   }
+
+  body {
+  background-color: lightblue;
+}
+
+    img {
+  object-fit: contain;
+  object-position: center;
+  width: 500px;
+  height: 700px;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.scale-down {
+  object-fit: scale-down;
+}
+
+.fill {
+	object-fit: fill;
+}
+
+.none {
+	object-fit: none;
 }

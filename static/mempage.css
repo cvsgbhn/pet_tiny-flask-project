@@ -1,0 +1,14 @@
+  h1 {
+    background-color: #b55e91;
+    font-family:  Helvetica, Arial, Geneva, sans-serif; 
+  }
+
+  body {
+  background-color: lightblue;
+}
+
+    img {
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+}

@@ -54,4 +54,4 @@ def get_universe_route():
     return redirect(url_for('/dc'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=True)
